@@ -13,6 +13,8 @@ module.exports = {
   },
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'vue/no-unregistered-components': ['error', { ignorePatterns: ['router-view', 'router-link'] }],
+    'vue/script-setup-uses-vars': 'error'
   }
 }
